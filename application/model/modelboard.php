@@ -34,7 +34,7 @@
 					$this->query();
 						break;
 					case 'update':
-					$this->sql = "UPDATE board SET subject=?, content=? where idx='{$this->param->idx}'";
+					$this->sql = "UPDATE board SET subject=?, content=?, date=now() where idx='{$this->param->idx}'";
 					$this->getExearr($_POST,"/action");
 					$this->query();
 						break;
