@@ -20,6 +20,7 @@
 
 		function delete(){
 			loginchk();
+			access($this->view->midx != $_SESSION['member']->idx,"작성자만 접근할수있습니다","/");
 			$this->model->delete();
 			alert("삭제");
 			move("/");
